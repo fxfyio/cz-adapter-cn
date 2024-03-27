@@ -1,7 +1,9 @@
 {
   "name": "cz-adapter-cn",
   "version": "1.0.0",
-  "description": "",
+  "description": "git cz 中文适配器",
+  "type": "module",
+  
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

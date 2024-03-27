@@ -1,9 +1,8 @@
 'use strict';
 
-const inquirer = require('inquirer'); // 引入 inquirer 库用于交互式问答
+import inquirer from 'inquirer';
 
-module.exports = {
-  prompter: function(cz, commit) {
+const  prompter = (cz, commit) =>  {
     // 提问列表
     inquirer.prompt([
       {
@@ -70,5 +69,6 @@ module.exports = {
       // 调用 commit 函数完成提交
       commit(commitMessage);
     });
-  }
-};
+  };
+// 使用 export 语法导出 prompter 函数
+export { prompter };
