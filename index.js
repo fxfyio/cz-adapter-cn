@@ -72,3 +72,13 @@ const  prompter = (cz, commit) =>  {
   };
 // 使用 export 语法导出 prompter 函数
 export { prompter };
+
+
+// 仅当直接运行该模块时执行
+if (import.meta.url === `file://${process.argv[1]}`) {
+    const czMock = {}; // 根据需要模拟 cz 对象
+    const commitMock = (message) => console.log(`模拟提交: ${message}`);
+
+    // 直接调用 prompter 函数进行测试
+    prompter(czMock, commitMock);
+}
